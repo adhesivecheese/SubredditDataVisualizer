@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Subreddit Statistics Visualizer</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+
+			<div class="column column-sm">
+				<div class="row">
+					<div class="container">
+						<h3>Subreddit Statistics</h3>
+						<form action="">
+							<label for="subreddit">Subreddit</label>
+							<input type="text" id="subreddit" name="subreddit" Value="DirtyPenPals">
+							<label for="days">Days of History: <span id="daysToGet">30 Days</span></label>
+							<input type="range" min="1" max="30" value="30" class="slider" id="daysRange">
+							<label for="days">Top Users to Get: <span id="usersToGet">25 Users</span></label>
+							<input type="range" min="5" max="75" value="25" class="slider" id="usersRange">
+							<input type="submit" value="Update Stats">
+						</form>
+					</div>
+				</div>
+				
+				<div class="row"><br></div>
+				
+				<div class="row">
+					<div class="container">
+						<h3>At a Glance</h3>
+						<table id="quickStats">
+							<tr>
+								<th>Totals in the last <span id="daysDisplayed">30</span> Days</th>
+								<th>Number</th>
+								<th>Average Time Between Posts</th>
+							</tr>
+							<tr>
+								<td>Submissions</td>
+								<td id="totPost">0</td>
+								<td id="timePost">0</td>
+							</tr>
+							<tr>
+								<td>Comments</td>
+								<td id="totComment">0</td>
+								<td id="timeComment">0</td>
+							</tr>
+						</table>
+
+						<h4>Most Active Users</h4>
+							<table id="topPosters">
+								<tr>
+									<th>Posters</th><th>Commenters</th>
+								</tr>
+								<tr>
+									<td id="posts0"></td>
+									<td id="comments0"></td>
+								</tr>
+								<tr>
+									<td id="posts1"></td>
+									<td id="comments1"></td>
+								</tr>
+								<tr>
+									<td id="posts2"></td>
+									<td id="comments2"></td>
+								</tr>
+								<tr>
+									<td id="posts3"></td>
+									<td id="comments3"></td>
+								</tr>
+								<tr>
+									<td id="posts4"></td>
+									<td id="comments4"></td>
+								</tr>
+							</table>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="column column-lg">
+				<div class="row">
+					<button type="button" class="collapsible active">Posts and Comments</button>
+					<div class="content" id="aggregate" style="display:block; height: 500px"></div>
+				</div>
+				<div class="row">
+					<button type="button" class="collapsible active">Top Posters</button>
+					<div class="content" id="submissions" style="display:block; height: 1000px"></div>
+				</div>
+				<div class="row">
+					<button type="button" class="collapsible active">Top Commenters</button>
+					<div class="content" id="comments" style="display:block; height: 1000px"></div> <!--Height should be 40*number of users to fetch-->
+				</div>
+			</div>
+
+	</body>
+	
+	<script src="listener.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+</html>

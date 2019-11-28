@@ -1,0 +1,175 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#quickStats, #topPosters {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #ddd;
+	height: 36px;
+	padding-left: 8px;
+}
+
+td a {
+	text-decoration: none;
+	color: #000;
+	width: 100%;
+	height: 100%;
+	padding-top: 8px;
+	display: block;
+}
+
+td:hover {
+	background-color: #fff;
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #2c7dc9;
+	color: white;
+	cursor: default;
+}
+
+#quickstats th, td {
+	width: 33%
+}
+
+.slider {
+	margin: 10px 0 10px 0;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #2c7dc9;
+	cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #2c7dc9;
+	cursor: pointer;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=submit] {
+	width: 100%;
+	background-color: #0DD3BB;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #65E3D4;
+}
+
+div.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+div.container h3 {
+	text-align: center;
+	margin-top: 0;
+}
+
+div.container h4 {
+	text-align: center
+}
+
+form label {
+	font-weight: bold;
+}
+
+form label span {
+	font-weight: normal;
+}
+
+.collapsible {
+	text-align: center;
+	padding: 15px 0;
+	background-color: #b2112f;
+	color: white;
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+
+.active, .collapsible:hover {
+	background-color: #ea783f;
+}
+
+.content {
+	padding: 15px;
+	overflow: hidden;
+	background-color: #f2f2f2;
+}
+
+.column {
+	float: left;
+	padding: 10px;
+}
+
+.column-lg {
+	width: 70%;
+}
+
+.column-sm {
+	width: 30%;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 1200px) {
+	.column {
+		width: 100%;
+	}
+}
